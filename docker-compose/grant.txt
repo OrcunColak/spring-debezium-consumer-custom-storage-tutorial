@@ -1,0 +1,12 @@
+mysql -p -u root
+password : 123456
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'debezium'@'%' WITH GRANT OPTION;
+mysql> FLUSH PRIVILEGES;
+mysql > use debezium;
+mysql > CREATE TABLE employee (id INT PRIMARY KEY,first_name VARCHAR(50),last_name VARCHAR(50));
+
+
+mysql> INSERT INTO employee (id,first_name,last_name) VALUES (1, 'employee1','lastname1');
+mysql> INSERT INTO employee (id,first_name,last_name) VALUES (2, 'employee2','lastname2');
+mysql> INSERT INTO employee (id,first_name,last_name) VALUES (3, 'employee3','lastname3');
+mysql> INSERT INTO employee (id,first_name,last_name) VALUES (4, 'employee4','lastname4');
